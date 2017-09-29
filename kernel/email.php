@@ -67,6 +67,12 @@ function sendMail($template, $participant, $lang="de")
     $from = \config()["EMail"][$participant->faculty]["Name"]." <".\config()["EMail"][$participant->faculty]["Address"].">";
     $subject = $template[$lang."_subject"];
     
-    mail($to, $subject, $message, "From: ".$from."\r\nContent-Type: text/plain;charset=utf-8\r\nBCC: ple@st.ovgu.de");
+    $bcc = "";
+    if (\config()["EMailSignupBCC"] != "")
+    {
+        $bcc = "BCC: ".\config()["EMailSignupBCC"];
+    }
+    
+    mail($to, $subject, $message, "From: ".$from."\r\nContent-Type: text/plain;charset=utf-8\r\n".$bcc);
 }
 

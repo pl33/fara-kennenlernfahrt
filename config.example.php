@@ -9,6 +9,7 @@ function config()
             "ABC" => array("Address" => "info@abc.tld", "Name" => "Fachschaftsrat ABC"),
             "XYZ" => array("Address" => "info@xyz.tld", "Name" => "Fachschaftsrat XYZ")
         ),
+        "EMailSignupBCC" => "Person <manager@abc.tld>, Person <manager@xyz.tld>",
         "Bank" => array(
             "ABC" => array("Receipient" => "Fachschaftsrat ABC", "IBAN" => "DExx xxxx xxxx xxxx xxxx", "BIC" => "xxxxDExxxxx"),
             "XYZ" => array("Receipient" => "Fachschaftsrat ABC", "IBAN" => "DExx xxxx xxxx xxxx xxxx", "BIC" => "xxxxDExxxxx")
