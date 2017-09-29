@@ -265,6 +265,35 @@ class Participant
 
         return $participant_list; 
     }
+    
+    static public function getResigned($faculty = "", $role = "")
+    {
+        $db = \openDB();
+        
+        $participant_list = array();
+        
+        $query = "SELECT * FROM participants WHERE (resigned != '')";
+        if ($faculty != "")
+        {
+            $query .= " AND (faculty = ".$db->quote($faculty).")";
+        }
+        if ($role != "")
+        {
+            $query .= " AND (role = ".$db->quote($role).")";
+        }
+        $query .= " ORDER BY signup_timestamp";
+        
+        $rows = $db->query($query);
+        foreach ($rows as $entry)
+        {
+            $participant = new Participant();
+            Participant::scanRow($participant, $entry);
+            
+            array_push($participant_list, $participant);
+        }
+
+        return $participant_list; 
+    }
 }
 
 ?>

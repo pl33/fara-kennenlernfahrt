@@ -22,7 +22,8 @@ function getRoutes()
         "get" => array(
             "/" => array("Controller" => "Signup", "Function" => "index"),
             "/signup" => array("Controller" => "Signup", "Function" => "index"),
-            "/dosignup" => array("Controller" => "Signup", "Function" => "index")
+            "/dosignup" => array("Controller" => "Signup", "Function" => "index"),
+            "/admin" => array("Controller" => "AdminOverview", "Function" => "index")
         ),
         "post" => array(
             "/signup" => array("Controller" => "Signup", "Function" => "check"),
