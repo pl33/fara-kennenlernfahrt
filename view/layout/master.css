@@ -1,0 +1,131 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28.09.2017, 22:13:08
+    Author     : ple
+*/
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+header
+{
+    background-origin: border-box;
+    background-image: url("background.png");
+    background-size: cover;
+    
+    padding: 0px;
+    margin: 0px;
+}
+
+header h1
+{
+    margin-top: 0px;
+    padding-top: 20px;
+    
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+header h2
+{
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+header div.menu
+{
+    width: 100%;
+    height: 20px;
+    margin: 0px;
+    
+    background-color: black;
+    
+    text-align: center;
+    font-family: sans-serif;
+    
+    padding: 10px;
+}
+
+header div.menu ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header div.menu a
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+header p.lang
+{
+    margin: 1em;
+    
+    text-align: right;
+    font-family: sans-serif;
+    //color: darkgrey;
+    color: lightgrey;
+}
+
+header p.lang a
+{
+    //color: darkgrey;
+    color: lightgrey;
+}
+
+div.content
+{
+    margin: auto;
+    width: 50%;
+    
+    font-family: sans-serif;
+}
+
+div.form
+{
+    
+}
+
+div.form dl
+{
+    
+}
+
+div.form dt
+{
+    
+}
+
+footer
+{
+    margin-top: 20px;
+    padding-top: 20px;
+    
+    background-color: black;
+    
+    text-align: center;
+    font-family: sans-serif;
+    
+    padding: 10px;
+}
+
+footer p.references a
+{
+    color: lightgrey;
+}
+
