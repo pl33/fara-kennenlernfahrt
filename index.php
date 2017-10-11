@@ -20,6 +20,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+require("lib/password_compat/lib/password.php");
+
 include_once("config.php");
 include_once("mail_templates.php");
 include_once("kernel/view.php");
