@@ -27,8 +27,11 @@ include_once("kernel/route.php");
 include_once("kernel/db.php");
 include_once("kernel/email.php");
 include_once("kernel/price.php");
+include_once("kernel/login.php");
 
 date_default_timezone_set("Europe/Berlin");
+
+Login::start();
 
 $output = \Route\Route::call();
 

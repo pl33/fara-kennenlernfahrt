@@ -88,7 +88,7 @@ HTML;
         
         $html .= <<<HTML
     <div class="form">
-        {$form->open("/signup", $request)}
+        {$form->open("/", $request)}
         <dl class="form_row">
             <dt class="form_label">{$form->label('name', $formLabels[$lang]['name'])}</dt>
             <dd class="form_input">{$form->text('name')}</dd>

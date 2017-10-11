@@ -47,15 +47,41 @@ class AdminOverview
     
     static public function index($request)
     {
-        $faculties = \config()["FaRas"];
+        if (\Login::isLoggedIn())
+        {
+            $faculties = \config()["FaRas"];
+
+            $variables = array();
+
+            /* Participant List */
+            $variables["admitted"] = AdminOverview::getAdmitted($faculties);
+            $variables["waiting"] = AdminOverview::getWaiting($faculties);
+            $variables["resigned"] = AdminOverview::getResigned($faculties);
+
+            return \View("AdminOverview", $variables, $request);
+        }
+        else
+        {
+            return \View("Login", array(), $request);
+        }
+    }
+    
+    static public function login($request)
+    {
+        if (\Login::login($request["email"], $request["password"]))
+        {
+            return \Controller\AdminOverview::index(array());
+        }
+        else
+        {
+            return \View("Login", array("error"=>true), $request);
+        }
+    }
+    
+    static public function logout($request)
+    {
+        \Login::logout();
         
-        $variables = array();
-        
-        /* Participant List */
-        $variables["admitted"] = AdminOverview::getAdmitted($faculties);
-        $variables["waiting"] = AdminOverview::getWaiting($faculties);
-        $variables["resigned"] = AdminOverview::getResigned($faculties);
-        
-        return \View("AdminOverview", $variables, $request);
+        return \View("Login", array(), $request);
     }
 }

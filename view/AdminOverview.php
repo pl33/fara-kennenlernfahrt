@@ -17,19 +17,36 @@ class AdminOverview
         foreach ($list as $faculty => $sublist)
         {
             $html .= "<h1>".$caption." ".$faculty."</h1>";
-            $html .= "<ul class=\"participants\">";
+            $html .= "<table class=\"participants\">";
+            $html .= <<<HTML
+                    <tr>
+                        <th>Name</th>
+                        <th>E-Mail</th>
+                        <th>Telefon</th>
+                        <th>Gruppe</th>
+                        <th>Zahlungsart</th>
+                        <th>Anmerkung</th>
+                        <th>Zeitstempel</th>
+                    </tr>
+HTML;
             
             foreach ($sublist as $participant)
             {
                 
                 $html .= <<<HTML
-                    <li>
-                        <div class="name">{$participant->name}</div>
-                    </li>
+                    <tr>
+                        <td>{$participant->name}</td>
+                        <td>{$participant->email}</td>
+                        <td>{$participant->phone}</td>
+                        <td>{$participant->role}</td>
+                        <td>{$participant->paymethod}</td>
+                        <td>{$participant->remarks}</td>
+                        <td>{$participant->signup_timestamp}</td>
+                    </tr>
 HTML;
             }
             
-            $html .= "</ul>";
+            $html .= "</table>";
         }
         
         return $html;

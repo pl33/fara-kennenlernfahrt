@@ -23,11 +23,14 @@ function getRoutes()
             "/" => array("Controller" => "Signup", "Function" => "index"),
             "/signup" => array("Controller" => "Signup", "Function" => "index"),
             "/dosignup" => array("Controller" => "Signup", "Function" => "index"),
-            "/admin" => array("Controller" => "AdminOverview", "Function" => "index")
+            "/admin" => array("Controller" => "AdminOverview", "Function" => "index"),
+            "/logout" => array("Controller" => "AdminOverview", "Function" => "logout")
         ),
         "post" => array(
-            "/signup" => array("Controller" => "Signup", "Function" => "check"),
-            "/dosignup" => array("Controller" => "Signup", "Function" => "signup")
+            //"/signup" => array("Controller" => "Signup", "Function" => "check"),
+            "/" => array("Controller" => "Signup", "Function" => "signup"),
+            "/dosignup" => array("Controller" => "Signup", "Function" => "signup"),
+            "/admin" => array("Controller" => "AdminOverview", "Function" => "login")
         )
     );
     
