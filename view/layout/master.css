@@ -62,6 +62,11 @@ header div.menu ul
     padding: 0;
 }
 
+header div.menu ul li
+{
+    display: inline;
+}
+
 header div.menu a
 {
     color: white;
@@ -86,10 +91,18 @@ header p.lang a
     color: lightgrey;
 }
 
-div.content
+div.content_narrow
 {
     margin: auto;
     width: 50%;
+    
+    font-family: sans-serif;
+}
+
+div.content_wide
+{
+    margin: auto;
+    width: 90%;
     
     font-family: sans-serif;
 }
@@ -109,6 +122,18 @@ div.form dt
     
 }
 
+ul.actions
+{
+    list-style-type:disc;
+    margin: 0;
+    padding: 0;
+}
+
+ul.actions a
+{
+    color: darkred;
+}
+
 footer
 {
     margin-top: 20px;
@@ -125,5 +150,31 @@ footer
 footer p.references a
 {
     color: lightgrey;
+}
+
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even)
+{
+    background-color: lightgray;
+}
+
+tr:hover
+{
+    background-color: greenyellow;
+}
+
+th
+{
+    text-align: left;
+}
+
+td
+{
+    text-align: left;
 }
 

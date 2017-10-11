@@ -22,8 +22,7 @@ class Participant
 {
     protected $db;
     
-    protected $id;
-    public $name, $email, $phone, $faculty, $role, $paymethod, $remarks, $signup_timestamp, $admitted, $paid, $resinged, $refunded, $lang, $fee;
+    public $id, $name, $email, $phone, $faculty, $role, $paymethod, $remarks, $signup_timestamp, $admitted, $paid, $resinged, $refunded, $lang, $fee;
     
     function __construct()
     {
@@ -135,6 +134,11 @@ class Participant
         foreach ($rows as $entry)
         {
             $row = $entry;
+        }
+        
+        if (!isset($row))
+        {
+            return false;
         }
         
         Participant::scanRow($participant, $row);

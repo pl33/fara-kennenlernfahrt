@@ -24,13 +24,21 @@ function getRoutes()
             "/signup" => array("Controller" => "Signup", "Function" => "index"),
             "/dosignup" => array("Controller" => "Signup", "Function" => "index"),
             "/admin" => array("Controller" => "AdminOverview", "Function" => "index"),
-            "/logout" => array("Controller" => "AdminOverview", "Function" => "logout")
+            "/logout" => array("Controller" => "AdminOverview", "Function" => "logout"),
+            "/paid" => array("Controller" => "AdminOverview", "Function" => "paid"),
+            "/admitted" => array("Controller" => "AdminOverview", "Function" => "admitted"),
+            "/towaiting" => array("Controller" => "AdminOverview", "Function" => "towaiting"),
+            "/resign" => array("Controller" => "AdminOverview", "Function" => "resign"),
+            "/refunded" => array("Controller" => "AdminOverview", "Function" => "refunded"),
+            "/paymentreset" => array("Controller" => "AdminOverview", "Function" => "paymentreset"),
+            "/changepw" => array("Controller" => "ChangePassword", "Function" => "index")
         ),
         "post" => array(
             //"/signup" => array("Controller" => "Signup", "Function" => "check"),
             "/" => array("Controller" => "Signup", "Function" => "signup"),
             "/dosignup" => array("Controller" => "Signup", "Function" => "signup"),
-            "/admin" => array("Controller" => "AdminOverview", "Function" => "login")
+            "/admin" => array("Controller" => "AdminOverview", "Function" => "login"),
+            "/changepw" => array("Controller" => "ChangePassword", "Function" => "change")
         )
     );
     

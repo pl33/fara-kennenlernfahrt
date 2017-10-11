@@ -62,5 +62,17 @@ class Login
         
         session_destroy();
     }
+    
+    static public function email()
+    {
+        if (isset($_SESSION["login"]))
+        {
+            return $_SESSION["login"]["email"];
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 

@@ -20,7 +20,7 @@ namespace Layout;
 
 class Master
 {
-    static public function header($subtitle, $request, $menu=array(), $lang = "de")
+    static public function header($subtitle, $request, $menu=array(), $lang = "de", $style="narrow")
     {
         $title = array("de" => "Kennenlernfahrt", "en" => "Freshmen tour");
         
@@ -55,7 +55,7 @@ class Master
             <p class="lang"><a href="?lang=de&{$args}">Deutsch</a> | <a href="?lang=en&{$args}">English</a></p>
             <div class="menu">{$navigation}</div>
         </header>
-        <div class="content">
+        <div class="content_{$style}">
 HTML;
     }
     
@@ -66,7 +66,7 @@ HTML;
         return <<<HTML
         </div>
         <footer>
-            <p class="references"><a href="{$impress}" target="_new">Impressum</a></p>
+            <p class="references"><a href="{$impress}" target="_new">Impressum</a> | <a href="?p=/admin">Admin</a></p>
         </footer>
     </body>
 </html>
